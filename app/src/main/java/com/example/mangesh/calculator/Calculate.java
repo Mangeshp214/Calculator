@@ -24,12 +24,14 @@ public class Calculate extends MainActivity {
         ans=0;
     }
 
-    void setValue(Double val1){
+    Boolean setValue(Double val1){
         num1=val1;
+        return true;
     }           /*Initializes first value.*/
 
-    void setValue2(Double val2){
+    Boolean setValue2(Double val2){
         num2=val2;
+        return true;
     }           /*Initializes second value.*/
 
 
@@ -38,20 +40,19 @@ public class Calculate extends MainActivity {
     * returns double value
     *
     * */
-    Double calc(char sign){
+    Double calc(String sign){
 
-        if(sign == '+'){
+        if(sign.equals("+")){
             ans = num1 + num2;
-        }else if(sign == '-'){
+        }else if(sign.equals("-")){
             ans = num1 - num2;
-        }else if(sign == '*'){
+        }else if(sign.equals("*")){
             ans = num1 * num2;
-        }else if(sign == '/'){
+        }else if(sign.equals("/")){
             ans = num1 / num2;
         }else{
             return null;
         }
-        sign = '1';
 
         return ans;
     }
