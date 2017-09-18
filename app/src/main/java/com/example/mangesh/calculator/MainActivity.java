@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
                     val2 = Double.parseDouble(v2.getText().toString());
 
                     val_2 = calculate.setValue2(val2);
-                    ans = calculate.calc("+");
+                    ans = calculate.calc(sgn.getText().toString());
 
                     answr.setText(Double.toString(ans));
 
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
                     v2.setText("");
                     val_2 = false;
                     opr = true;
-                }else{
+                }else if(val_1 == false){
                     val1 = Double.parseDouble(v1.getText().toString());
 
                     val_1 = calculate.setValue(val1);
@@ -206,6 +206,8 @@ public class MainActivity extends AppCompatActivity {
                     sgn.setText("+");
 
                     opr = true;
+                }else {
+                    Toast.makeText(MainActivity.this,"Invalid",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -218,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
                     val2 = Double.parseDouble(v2.getText().toString());
 
                     val_2 = calculate.setValue2(val2);
-                    ans = calculate.calc("-");
+                    ans = calculate.calc(sgn.getText().toString());
 
                     answr.setText(Double.toString(ans));
 
@@ -249,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
                     val2 = Double.parseDouble(v2.getText().toString());
 
                     val_2 = calculate.setValue2(val2);
-                    ans = calculate.calc("*");
+                    ans = calculate.calc(sgn.getText().toString());
 
                     answr.setText(Double.toString(ans));
 
@@ -280,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
                     val2 = Double.parseDouble(v2.getText().toString());
 
                     val_2 = calculate.setValue2(val2);
-                    ans = calculate.calc("/");
+                    ans = calculate.calc(sgn.getText().toString());
 
                     answr.setText(Double.toString(ans));
 
